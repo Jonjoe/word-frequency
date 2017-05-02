@@ -109,4 +109,4 @@ The priocess module is resposible for all the logic of the dictionary and its co
 
 - Reactive programming (RXJS) would have been great here due to use of streams. I would have liked to have processed the data during the initial stream into global.store. This would speed things up drastically. Instead the files are streamed into arrays and then looped through. I didnt have enough time to impliment.
 
-- RAMDA is a functional programming library for javascript. Its implimented heavily throughout the application is its generally alot facter than native alternatives. 
+- RAMDA is a functional programming library for javascript. Its implimented heavily throughout the application as its generally alot faster than native alternatives. 
