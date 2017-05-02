@@ -9,7 +9,13 @@
 	2.1 - Install
 	2.2 - DataSets
 	2.3 - Testing
-3.0 - Notes
+3.0 - Modules
+	3.1 - boot
+	3.2 - functions
+	3.3 - models
+	3.4 - store
+	3.5 - streams
+	3.6 - writer
 ```
 	
 ## 1.0 - Project Overview
@@ -70,3 +76,36 @@ Once you have performed all of the above you will be able to start the applicati
 5 of 15 completed.
 ```
 Once complete you will be given a path to the output.txt where you will find your results stored.
+
+## 3.0 - Modules
+The application is broken down into smaller modules seperated by concern. This makes it easier to test and easier to read. Below is a description of each one.
+
+### 3.1 - boot
+This module is concerned with process order. Streams are ASync so boot needs to make sure the data is flowing in the right direction.
+
+### 3.2 - functions
+This is a collection of pure functions that are used in the application. 
+
+### 3.3 - models
+This is a collection of object constructors that are used to ensure that any specific object is constructed by a specific process. This ensures better continuity and easier maintainence. 
+
+### 3.4 - store
+This describes and constructs a global level store and its methods that the app can tap into.
+
+### 3.5 - streams
+The data is too big to be read in synchronously. This module constructs streams that process the test files into arrays and dumps them into the store.
+
+### 3.6 - writer
+The writer will read the processed data living in the store and format/write them onto a txt ascii file.
+
+### 3.7 - process
+The priocess module is resposible for all the logic of the dictionary and its counts. 
+
+## 4.0 Notes
+- On hindsight I would have liked to have used typescript for this. Its strong typing, use of es6, interfaces and testing make it ideal for this kind of application.
+
+- I would have liked the store to have been inside its own instance instead of sitting in global. I generally hate using global but I didnt have enough time to impliment. 
+
+- Reactive programming (RXJS) would have been great here due to use of streams. I would have liked to have processed the data during the initial stream into global.store. This would speed things up drastically. Instead the files are streamed into arrays and then looped through. I didnt have enough time to impliment.
+
+- RAMDA is a functional programming library for javascript. Its implimented heavily throughout the application is its generally alot facter than native alternatives. 
