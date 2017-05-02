@@ -16,6 +16,7 @@
 	3.4 - store
 	3.5 - streams
 	3.6 - writer
+4.0 - Notes
 ```
 	
 ## 1.0 - Project Overview
