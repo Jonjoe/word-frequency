@@ -1,0 +1,6 @@
+node_modules
+*.map
+output\.txt
+data/queries.txt
+data/records.txt
+.DS_Store

@@ -1,0 +1,14 @@
+{
+	"rules": {
+		"mocha/no-exclusive-tests": "error",
+		"semi": ["error", "always"],
+		"quotes": ["error", "single"],
+		"indent": ["error", "tab"]
+	},
+	"plugins": [
+    "mocha"
+  ],
+	"parserOptions": {
+		"ecmaVersion": 6
+	}
+}
