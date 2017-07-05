@@ -28,7 +28,7 @@ Query = Single set of words that are the requirment for a record to be processed
 Record = Set of words to be processed if they contain the query.
 ```
 ### 1.2 - Objective
-For each word that is not in the query, how many times does the word appear in all records that the entire query is present in?
+For each word that is not in the query, how many times does the word appear in all records that the entire query is present in? Do this in a way that is extendable, easily testable and easy to understand.
 
 ### 1.3 - Outcome
 Output a dictionary of words to counts, omitting words with counts of zero. Given a list of records and a list of queries, determine the output for each query with respect to the entire list of records.
